@@ -143,7 +143,7 @@ The performance of all models is summarised in the following tables.
 | LLM Few-shot                | 0.50   | 0.58   | 0.43     |
 | LoRA Fine-tuned LLM         | 0.55   | 0.61   | 0.47     |
 
-## Key Findings / Discussion
+## Discussion
 
 The experimental results demonstrate a clear performance hierarchy across the different information extraction strategies.
 
@@ -158,3 +158,17 @@ The CRF model provides a moderate baseline, outperforming rule-based systems but
 Across all models, the PART (Outcome) category remains the most challenging to extract. This is likely due to the variability and complexity of outcome expressions in clinical trial abstracts compared to more structured participant and intervention descriptions.
 
 Overall, the results indicate that contextual language understanding plays a critical role in structured biomedical information extraction, with fine-tuned LLMs offering the most robust and balanced performance across all evaluation settings.
+
+## Limitations
+
+This study has several limitations related to evaluation metrics, dataset characteristics, and modelling approaches.
+
+Firstly, standard evaluation metrics such as precision, recall, and F1-score have inherent limitations. Precision does not account for false negatives, while recall ignores false positives, meaning each metric captures only one aspect of model performance. Although F1-score provides a balance between the two, it assumes equal importance of precision and recall, which may not reflect real-world biomedical information extraction requirements.
+
+Additionally, macro-averaged F1-score can be misleading in imbalanced datasets, as it assigns equal importance to all classes and may overemphasise performance on rare entity types while underrepresenting dominant ones.
+
+In this study, evaluation was performed using the seqeval framework, which follows a strict span-based (BIO) evaluation scheme. This approach only rewards predictions when the entire entity span exactly matches the ground truth. As a result, partially correct spans receive no credit, even if they are semantically close to the correct annotation. This strict matching criterion can lead to lower scores and does not capture partial or near-miss correctness.
+
+From a modelling perspective, rule-based systems are limited by lexical rigidity and cannot generalise beyond predefined patterns. CRF models are constrained by boundary prediction errors, particularly in identifying accurate entity spans. Large language models may generate inconsistent outputs or hallucinated entities, especially in complex biomedical contexts. While LoRA fine-tuning improves performance, it still struggles with rare classes due to limited training examples.
+
+Finally, all experiments are conducted on clinical trial abstracts only, which limits generalisation to full-text biomedical documents where linguistic structures are more complex and varied.
