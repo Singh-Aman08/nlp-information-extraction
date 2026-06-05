@@ -213,13 +213,13 @@ The project is organized as follows:
 - **LLM_Zero_Shot_/**  
   - LLM_Zero_shot.ipynb: Zero-shot prompting experiments  
   - Evaluation.ipynb: Evaluation of zero-shot results  
-  - Utils.ipynb: Helper functions for prompting and output processing  
+  - Utils.ipynb: Utility functions for dataset processing and evaluation   
   - result_zero_shot.csv: Model predictions and outputs  
 
 - **LLM_Few_Shot_/**  
   - LLM_Few_Shot.ipynb: Few-shot prompting experiments  
   - Evaluation.ipynb: Evaluation of few-shot results  
-  - Utils.ipynb: Helper functions for prompt construction and processing  
+  - Utils.ipynb: Utility functions for dataset processing and evaluation   
   - result_few_shot.csv: Model predictions and outputs  
 
 - **LoRA/**  
