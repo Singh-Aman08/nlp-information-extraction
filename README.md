@@ -94,9 +94,18 @@ Low-Rank Adaptation (LoRA) was used to fine-tune a pretrained language model- **
 
 LoRA introduces trainable low-rank matrices into selected transformer layers, enabling efficient domain adaptation while requiring significantly fewer trainable parameters than full model fine-tuning.
 
-### 6. Evaluation
+## Evaluation Metrics
 
-All approaches were evaluated using Precision, Recall, and F1-score. Performance was analysed at both the model level and the individual field level (PART, INT, and OUT) to compare the effectiveness of different extraction strategies.
+Models were evaluated using standard information extraction metrics:
+
+- **Precision:** Correctness of extracted entities  
+- **Recall:** Coverage of true entities  
+- **F1-score:** Primary metric combining precision and recall  
+
+Evaluation was conducted at two levels:
+
+- **Model-level (Micro/Macro averages):** Overall performance across all entity types  
+- **Field-level:** Performance on individual categories (PART, INT, OUT)
 
 ## Model-Level Performance (Micro-Averaged)
 
