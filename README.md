@@ -52,6 +52,58 @@ The dataset provides a benchmark for evaluating different information extraction
 
 **Dataset Repository:** https://github.com/bepnye/EBM-NLP
 
+## Methodology
+
+The project investigates multiple approaches for extracting structured information from clinical trial abstracts. The workflow consists of exploratory analysis, information extraction, and performance evaluation.
+
+### 1. Exploratory Data Analysis
+
+As a preliminary investigation, sentence-level semantic representations were generated using the **SentenceTransformer (all-MiniLM-L6-v2)** model. Each clinical trial abstract was segmented into sentences, and embeddings were computed for each sentence.
+
+To explore whether natural semantic groupings correspond to the target information categories, **K-means clustering** was applied to the sentence embeddings. The optimal number of clusters was determined using the **Within-Cluster Sum of Squares (WCSS) Elbow Method**, which indicated an optimal value of **K = 3**.
+
+For visualisation, **Principal Component Analysis (PCA)** was used to project the sentence embeddings into two dimensions. The resulting clusters showed meaningful semantic separation, broadly aligning with the three target extraction categories:
+
+- Participants (PART)
+- Interventions (INT)
+- Outcomes (OUT)
+
+This exploratory analysis suggests that sentence embeddings capture useful semantic information and that unsupervised clustering can reveal latent structure within clinical trial abstracts.
+
+### 2. Rule-Based Approaches
+
+Two rule-based methods were implemented:
+
+- **Unigram and Bigram Pattern Matching:** Extraction based on manually defined keyword patterns and n-gram matching.
+- **spaCy Rule-Based Extraction:** Pattern matching using spaCy's NLP pipeline and rule-based components.
+
+These approaches provide simple and interpretable baselines but are limited in their ability to generalise to unseen text patterns.
+
+### 3. Conditional Random Fields (CRF)
+
+A Conditional Random Field (CRF) model was trained for sequence labelling. The model uses contextual and lexical features to predict entity labels for each token in an abstract.
+
+CRFs are widely used for information extraction tasks because they model dependencies between neighbouring labels and can capture local contextual information.
+
+### 4. Large Language Models (LLMs)
+
+Prompt-based extraction was evaluated using large language models under two settings:
+
+- **Zero-Shot Learning:** The model performs extraction using task instructions without labelled examples.
+- **Few-Shot Learning:** A small number of annotated examples are provided within the prompt to guide extraction.
+
+These approaches leverage the reasoning and language understanding capabilities of foundation models without task-specific training.
+
+### 5. LoRA Fine-Tuning
+
+Low-Rank Adaptation (LoRA) was used to fine-tune a pretrained language model on the EBM-NLP dataset.
+
+LoRA introduces trainable low-rank matrices into selected transformer layers, enabling efficient domain adaptation while requiring significantly fewer trainable parameters than full model fine-tuning.
+
+### 6. Evaluation
+
+All approaches were evaluated using Precision, Recall, and F1-score. Performance was analysed at both the model level and the individual field level (PART, INT, and OUT) to compare the effectiveness of different extraction strategies.
+
 ## Model-Level Performance (Micro-Averaged)
 
 | Model                         | Precision | Recall | F1-score |
