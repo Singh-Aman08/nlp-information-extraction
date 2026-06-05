@@ -65,13 +65,13 @@ To explore the structure of the embedding space, **K-means clustering** was appl
 For visualization purposes, **Principal Component Analysis (PCA)** was used to project the embeddings into a two-dimensional space for qualitative inspection.
 
 ### 2. Rule-Based Approaches
-
 Two rule-based methods were implemented:
 
-- **Unigram and Bigram Pattern Matching:** Extraction based on manually defined keyword patterns and n-gram matching.
-- **spaCy Rule-Based Extraction:** Pattern matching using spaCy's NLP pipeline and rule-based components.
+- **Unigram, Bigram, and Regex Pattern Matching:** Extraction based on manually defined keyword patterns, n-gram matching, and regular expression-based rules designed to capture common lexical and structural patterns in clinical trial text.
 
-These approaches provide simple and interpretable baselines but are limited in their ability to generalise to unseen text patterns.
+- **spaCy Rule-Based Extraction:** Pattern matching using spaCy’s NLP pipeline and rule-based components for identifying relevant entities.
+
+These approaches serve as interpretable baselines for information extraction. However, they are limited in their ability to generalise to unseen linguistic variations and complex contextual patterns in clinical abstracts.
 
 ### 3. Conditional Random Fields (CRF)
 
