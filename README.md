@@ -4,7 +4,8 @@ Clinical trial abstracts contain a large amount of unstructured biomedical text,
 
 The main objective is to extract structured information from clinical trial abstracts into a predefined schema. Specifically, the task involves identifying and extracting three key components: **Participants (PART)**, **Intervention (INT)**, and **Outcome (OUT)** from each abstract. The extracted information is then used to evaluate and compare different information extraction strategies.
 
-The dataset used in this work is the **EBM-NLP dataset**, which consists of annotated clinical trial abstracts along with a structured schema for information extraction. This dataset provides the foundation for training and evaluating multiple approaches, including rule-based methods, statistical models, and large language model-based techniques.
+The dataset used in this project is the **EBM-NLP corpus**, a large-scale annotated dataset of approximately 5,000 clinical trial abstracts. It provides token-level annotations for PIO elements (Participants, Intervention, and Outcomes), making it widely used for biomedical information extraction tasks. The dataset can be accessed here:
+https://github.com/bepnye/EBM-NLP
 
 The project systematically compares the effectiveness of different extraction strategies, ranging from traditional rule-based approaches to modern transformer-based and fine-tuned language models, to assess their ability to accurately structure biomedical information from unstructured text.
 
