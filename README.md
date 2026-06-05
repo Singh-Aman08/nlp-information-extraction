@@ -96,17 +96,18 @@ LoRA introduces trainable low-rank matrices into selected transformer layers, en
 
 ## Evaluation Metrics
 
-Models were evaluated using standard information extraction metrics:
+Models were evaluated using standard Information Extraction (NER) metrics:
 
 - **Precision:** Correctness of extracted entities  
 - **Recall:** Coverage of true entities  
 - **F1-score:** Primary metric combining precision and recall  
 
+All metrics were computed using **seqeval**, a standard evaluation framework for sequence labeling tasks, ensuring strict span-level matching of predicted and ground-truth entities.
+
 Evaluation was conducted at two levels:
 
-- **Model-level (Micro/Macro averages):** Overall performance across all entity types  
-- **Field-level:** Performance on individual categories (PART, INT, OUT)
-
+- **Model-level (micro/macro averages):** Overall performance across all entity types  
+- **Field-level:** Performance across individual categories (**PART**, **INT**, **OUT**)  
 ## Results
 The performance of all models is summarised in the following tables.
 
