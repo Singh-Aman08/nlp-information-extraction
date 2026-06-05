@@ -8,7 +8,6 @@ The dataset used in this work is the **EBM-NLP corpus** (https://github.com/bepn
 
 In addition to extraction, this project also explores whether **unsupervised clustering methods like K-Means** can reveal natural groupings that align with schema components before performing structured extraction.
 
----
 
 ## Objectives
 
@@ -32,9 +31,9 @@ The main objectives of this project are:
 - To investigate whether unsupervised clustering methods can reveal latent structure in clinical trial sentences prior to extraction
 
 - To evaluate and compare all approaches using:
-  - Field-level performance (Precision, Recall, F1-score)
-  - Coverage vs precision trade-offs
-  - Practical usability for downstream biomedical information retrieval tasks
+  - Model-level performance (Micro-averaged Precision, Recall, and F1-score)
+  - Class-balanced performance (Macro-averaged Precision, Recall, and F1-score)
+  - Field-level performance across Participants (PART), Intervention (INT), and Outcome (OUT)
 
 - To analyse the strengths, limitations, and trade-offs between different extraction strategies
 
