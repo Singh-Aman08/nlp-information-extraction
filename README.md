@@ -1,13 +1,13 @@
 ## Project Overview
 
-Clinical trial abstracts contain a large amount of unstructured biomedical text, making it difficult for researchers to efficiently extract and compare key study details. This project focuses on converting unstructured clinical trial descriptions into structured information, enabling easier analysis, comparison, and evidence synthesis across studies.
+Clinical trial abstracts contain large amounts of unstructured biomedical text, making it difficult to efficiently extract and compare key study details. This project aims to structure this information to support easier analysis and evidence synthesis across biomedical literature.
 
-The main objective is to extract structured information from clinical trial abstracts into a predefined schema. Specifically, the task involves identifying and extracting three key components: **Participants (PART)**, **Intervention (INT)**, and **Outcome (OUT)** from each abstract. The extracted information is then used to evaluate and compare different information extraction strategies.
+The main objective is to extract three key components from each abstract: **Participants (PART)**, **Intervention (INT)**, and **Outcome (OUT)**. These extracted elements are used to evaluate and compare different information extraction approaches.
 
-The dataset used in this project is the **EBM-NLP corpus**, a large-scale annotated dataset of approximately 5,000 clinical trial abstracts. It provides token-level annotations for PIO elements (Participants, Intervention, and Outcomes), making it widely used for biomedical information extraction tasks. The dataset can be accessed here:
+The dataset used in this project is the **EBM-NLP corpus**, a large-scale dataset of approximately 5,000 clinical trial abstracts with token-level annotations for PIO elements. It is widely used for biomedical information extraction research. The dataset is available at:
 https://github.com/bepnye/EBM-NLP
 
-The project systematically compares the effectiveness of different extraction strategies, ranging from traditional rule-based approaches to modern transformer-based and fine-tuned language models, to assess their ability to accurately structure biomedical information from unstructured text.
+This project evaluates multiple extraction strategies, ranging from rule-based methods to transformer-based and fine-tuned language models, to assess their effectiveness in biomedical information extraction.
 
 ## Model-Level Performance (Micro-Averaged)
 
