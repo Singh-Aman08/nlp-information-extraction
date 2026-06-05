@@ -236,10 +236,6 @@ The project is organized as follows:
   - training_set.jsonl: Training dataset used for fine-tuning  
   - result_lora_2.csv: Model predictions and outputs  
 
-
-## Root Files
-
-- **README.md**: Project documentation and overview
 ## Author
 
 **Aman Kumar Singh**  
