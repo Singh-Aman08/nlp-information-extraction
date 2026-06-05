@@ -1,3 +1,5 @@
+# Structured Information Extraction
+---
 ## Project Overview
 Clinical trial abstracts contain large amounts of unstructured biomedical text, making it difficult for researchers to efficiently extract and synthesise key evidence across studies. Converting this information into structured formats enables easier comparison, retrieval, and downstream analysis in evidence-based medicine.
 
