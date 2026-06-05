@@ -195,3 +195,49 @@ Overall, the LoRA fine-tuned model achieved the best performance across both mic
 In contrast, rule-based and CRF methods served as useful baselines but were limited by poor generalisation and boundary prediction errors. Across all models, extracting Outcome (PART/OUT-related) information remained the most challenging task due to variability in clinical language.
 
 In conclusion, the study demonstrates that modern LLM-based approaches, particularly fine-tuned models, provide the most robust solution for structured extraction from clinical trial abstracts, with clear advantages in usability, completeness, and overall extraction quality.
+
+## Repository Structure
+
+The project is organized as follows:
+
+- **Data_Processing.ipynb**  
+  Handles dataset preprocessing, cleaning, sentence segmentation, and BIO tagging for sequence labelling tasks.
+
+- **Exploratory_Data_Analysis.ipynb**  
+  Performs sentence-level embedding generation, K-means clustering, and PCA-based visualization.
+
+- **Rule_based.ipynb**  
+  Implements rule-based extraction methods including unigram/bigram patterns, regex rules, and spaCy-based matching.
+
+- **CRF.ipynb**  
+  Contains feature engineering, training, and evaluation of the Conditional Random Field model.
+
+---
+
+### LLM Experiments
+
+- **LLM_Zero_Shot_/**  
+  - LLM_Zero_shot.ipynb: Zero-shot prompting experiments  
+  - Evaluation.ipynb: Evaluation of zero-shot results  
+  - Utils.ipynb: Helper functions for prompting and output processing  
+  - result_zero_shot.csv: Model predictions and outputs  
+
+- **LLM_Few_Shot_/**  
+  - LLM_Few_Shot.ipynb: Few-shot prompting experiments  
+  - Evaluation.ipynb: Evaluation of few-shot results  
+  - Utils.ipynb: Helper functions for prompt construction and processing  
+  - result_few_shot.csv: Model predictions and outputs  
+
+- **LoRA/**  
+  - LLM_Finetuning.ipynb: LoRA fine-tuning of LLaMA-3.2-3B-Instruct  
+  - Lora.ipynb: Inference using the fine-tuned model  
+  - Evaluation.ipynb: Evaluation of LoRA model performance  
+  - Utils.ipynb: Utility functions for dataset processing and evaluation  
+  - training_set.jsonl: Training dataset used for fine-tuning  
+  - result_lora_2.csv: Model predictions and outputs  
+
+---
+
+## Root Files
+
+- **README.md**: Project documentation and overview
