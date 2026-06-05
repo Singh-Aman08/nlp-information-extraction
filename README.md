@@ -142,3 +142,19 @@ The performance of all models is summarised in the following tables.
 | LLM Zero-shot                | 0.38   | 0.33   | 0.22     |
 | LLM Few-shot                | 0.50   | 0.58   | 0.43     |
 | LoRA Fine-tuned LLM         | 0.55   | 0.61   | 0.47     |
+
+## Key Findings / Discussion
+
+The experimental results demonstrate a clear performance hierarchy across the different information extraction strategies.
+
+Large Language Model-based approaches consistently outperform traditional methods, with the LoRA fine-tuned model achieving the best overall performance across both micro-averaged and macro-averaged evaluations. This indicates that domain adaptation through fine-tuning significantly improves the model’s ability to extract structured biomedical information.
+
+Few-shot learning also shows strong performance improvements over zero-shot prompting, particularly in recall and F1-score. This suggests that providing task-specific examples helps guide the model towards more accurate and complete extraction behaviour.
+
+In contrast, rule-based approaches and spaCy-based methods perform poorly in terms of recall, despite achieving relatively higher precision in some cases. This highlights their limitation in generalising beyond predefined patterns and their inability to capture the variability present in clinical trial language.
+
+The CRF model provides a moderate baseline, outperforming rule-based systems but significantly lagging behind LLM-based methods. While CRFs are effective at capturing local dependencies in structured sequence labelling tasks, they struggle with long-range contextual understanding.
+
+Across all models, the PART (Outcome) category remains the most challenging to extract. This is likely due to the variability and complexity of outcome expressions in clinical trial abstracts compared to more structured participant and intervention descriptions.
+
+Overall, the results indicate that contextual language understanding plays a critical role in structured biomedical information extraction, with fine-tuned LLMs offering the most robust and balanced performance across all evaluation settings.
