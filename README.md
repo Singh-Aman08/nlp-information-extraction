@@ -160,6 +160,16 @@ Across all models, the PART (Outcome) category remains the most challenging to e
 
 Overall, the results indicate that contextual language understanding plays a critical role in structured biomedical information extraction, with fine-tuned LLMs offering the most robust and balanced performance across all evaluation settings.
 
+## Downstream Usability
+
+Downstream usability refers to how effectively the extracted entities can be utilised for tasks such as querying, structured storage, and further analysis.
+
+In this study, all extracted outputs were converted into a structured CSV format to facilitate easy querying and integration into downstream analytical workflows.
+
+Rule-based methods often produce incomplete or fragmented extractions, which limits their usefulness in downstream applications. CRF-based models improve consistency in predictions but still suffer from boundary detection errors, which can affect the reliability of structured outputs.
+
+Large Language Model-based approaches generate more coherent and contextually complete extractions, improving their suitability for downstream use. Among all approaches, the LoRA fine-tuned model produces the most complete and reliable structured outputs, resulting in the highest downstream usability for practical biomedical information extraction tasks.
+
 ## Limitations
 
 This study has several limitations related to evaluation metrics, dataset characteristics, and modelling approaches.
@@ -173,16 +183,6 @@ In this study, evaluation was performed using the seqeval framework, which follo
 From a modelling perspective, rule-based systems are limited by lexical rigidity and cannot generalise beyond predefined patterns. CRF models are constrained by boundary prediction errors, particularly in identifying accurate entity spans. Large language models may generate inconsistent outputs or hallucinated entities, especially in complex biomedical contexts. While LoRA fine-tuning improves performance, it still struggles with rare classes due to limited training examples.
 
 Finally, all experiments are conducted on clinical trial abstracts only, which limits generalisation to full-text biomedical documents where linguistic structures are more complex and varied.
-
-## Downstream Usability
-
-Downstream usability refers to how effectively the extracted entities can be utilised for tasks such as querying, structured storage, and further analysis.
-
-In this study, all extracted outputs were converted into a structured CSV format to facilitate easy querying and integration into downstream analytical workflows.
-
-Rule-based methods often produce incomplete or fragmented extractions, which limits their usefulness in downstream applications. CRF-based models improve consistency in predictions but still suffer from boundary detection errors, which can affect the reliability of structured outputs.
-
-Large Language Model-based approaches generate more coherent and contextually complete extractions, improving their suitability for downstream use. Among all approaches, the LoRA fine-tuned model produces the most complete and reliable structured outputs, resulting in the highest downstream usability for practical biomedical information extraction tasks.
 
 ## Conclusion
 
@@ -236,8 +236,12 @@ The project is organized as follows:
   - training_set.jsonl: Training dataset used for fine-tuning  
   - result_lora_2.csv: Model predictions and outputs  
 
----
 
 ## Root Files
 
 - **README.md**: Project documentation and overview
+## Author
+
+**Aman Kumar Singh**  
+MSc Data Science  
+University of Bristol
