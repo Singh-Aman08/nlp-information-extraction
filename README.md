@@ -121,7 +121,7 @@ The performance of all models is summarised in the following tables.
 | LLM Few-shot                | 0.84     | 0.55   | 0.61     |
 | LoRA Fine-tuned LLM         | 0.85     | 0.59   | 0.64     |
 
-### Macro-Averaged Performance (Class-balanced Evaluation)
+### Class-balanced Evaluation (Macro-Averaged Performance)
 
 | Model                         | Macro Precision | Macro Recall | Macro F1 |
 |------------------------------|----------------|--------------|----------|
