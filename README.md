@@ -212,10 +212,6 @@ The project is organized as follows:
 - **CRF.ipynb**  
   Contains feature engineering, training, and evaluation of the Conditional Random Field model.
 
----
-
-### LLM Experiments
-
 - **LLM_Zero_Shot_/**  
   - LLM_Zero_shot.ipynb: Zero-shot prompting experiments  
   - Evaluation.ipynb: Evaluation of zero-shot results  
