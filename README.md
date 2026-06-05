@@ -38,6 +38,20 @@ The main objectives of this project are:
 
 - To analyse the strengths, limitations, and trade-offs between different extraction strategies
 
+## Dataset
+
+This project uses the **EBM-NLP dataset**, a large-scale corpus developed for evidence-based medicine information extraction tasks.
+
+The dataset consists of approximately 5,000 clinical trial abstracts collected from biomedical literature. Each abstract is annotated at the token level with labels corresponding to key components of clinical studies. For this project, the following information categories are considered:
+
+- **Participants (PART)** – the population or patient group involved in the study
+- **Intervention (INT)** – the treatment, procedure, or action being evaluated
+- **Outcome (OUT)** – the measured effects or results of the intervention
+
+The dataset provides a benchmark for evaluating different information extraction approaches, ranging from rule-based methods to machine learning and large language model-based techniques.
+
+**Dataset Repository:** https://github.com/bepnye/EBM-NLP
+
 ## Model-Level Performance (Micro-Averaged)
 
 | Model                         | Precision | Recall | F1-score |
