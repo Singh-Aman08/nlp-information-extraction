@@ -183,3 +183,15 @@ In this study, all extracted outputs were converted into a structured CSV format
 Rule-based methods often produce incomplete or fragmented extractions, which limits their usefulness in downstream applications. CRF-based models improve consistency in predictions but still suffer from boundary detection errors, which can affect the reliability of structured outputs.
 
 Large Language Model-based approaches generate more coherent and contextually complete extractions, improving their suitability for downstream use. Among all approaches, the LoRA fine-tuned model produces the most complete and reliable structured outputs, resulting in the highest downstream usability for practical biomedical information extraction tasks.
+
+## Conclusion
+
+This project investigated multiple approaches for structured information extraction from clinical trial abstracts using the EBM-NLP dataset. The task focused on extracting Participants (PART), Intervention (INT), and Outcome (OUT) information from unstructured biomedical text and evaluating different modelling strategies.
+
+A range of methods were implemented, including rule-based approaches, Conditional Random Fields (CRF), large language models (zero-shot and few-shot prompting), and a LoRA fine-tuned LLM. The results show a clear progression in performance from traditional methods to more advanced language model-based approaches.
+
+Overall, the LoRA fine-tuned model achieved the best performance across both micro and macro evaluations, demonstrating the effectiveness of domain-specific adaptation for biomedical information extraction. Few-shot and zero-shot LLM approaches also significantly outperformed rule-based and CRF methods, highlighting the importance of contextual understanding in clinical text.
+
+In contrast, rule-based and CRF methods served as useful baselines but were limited by poor generalisation and boundary prediction errors. Across all models, extracting Outcome (PART/OUT-related) information remained the most challenging task due to variability in clinical language.
+
+In conclusion, the study demonstrates that modern LLM-based approaches, particularly fine-tuned models, provide the most robust solution for structured extraction from clinical trial abstracts, with clear advantages in usability, completeness, and overall extraction quality.
