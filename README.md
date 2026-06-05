@@ -107,7 +107,10 @@ Evaluation was conducted at two levels:
 - **Model-level (Micro/Macro averages):** Overall performance across all entity types  
 - **Field-level:** Performance on individual categories (PART, INT, OUT)
 
-## Model-Level Performance (Micro-Averaged)
+## Results
+The performance of all models is summarised in the following tables.
+
+### Model-Level Performance (Micro-Averaged)
 
 | Model                         | Precision | Recall | F1-score |
 |------------------------------|----------|--------|----------|
@@ -118,7 +121,7 @@ Evaluation was conducted at two levels:
 | LLM Few-shot                | 0.84     | 0.55   | 0.61     |
 | LoRA Fine-tuned LLM         | 0.85     | 0.59   | 0.64     |
 
-## Macro-Averaged Performance (Class-balanced Evaluation)
+### Macro-Averaged Performance (Class-balanced Evaluation)
 
 | Model                         | Macro Precision | Macro Recall | Macro F1 |
 |------------------------------|----------------|--------------|----------|
@@ -129,7 +132,7 @@ Evaluation was conducted at two levels:
 | LLM Few-shot                | 0.70           | 0.55         | 0.61     |
 | LoRA Fine-tuned LLM         | 0.73           | 0.59         | 0.64     |
 
-## Field-Level Performance (F1-score by Entity Type)
+### Field-Level Performance (F1-score by Entity Type)
 
 | Model                         | INT F1 | OUT F1 | PART F1 |
 |------------------------------|--------|--------|----------|
